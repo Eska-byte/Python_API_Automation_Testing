@@ -1,9 +1,11 @@
+import pytest
 import requests
 from assertpy import assert_that
 from setting.endpoint import api_user
 from faker import Faker
 fake = Faker()
 
+@pytest.mark.QaseIO(1)
 def test():
     random_name = fake.name()
 

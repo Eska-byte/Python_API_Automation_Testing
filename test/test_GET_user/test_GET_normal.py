@@ -1,7 +1,9 @@
+import pytest
 import requests
 from assertpy import assert_that
 from setting.endpoint import api_user
 
+@pytest.mark.QaseIO(10)
 def test():
     head = {
         "Accept": "application/json",
