@@ -21,7 +21,7 @@ def test():
     resp_status = req.json()[1]["status"]
 
     #ASSERT
-    assert_that(status_code).is_equal_to(2001)
+    assert_that(status_code).is_equal_to(200)
     assert_that(resp_id).is_not_none()
     assert_that(resp_id).is_type_of(int)
     assert_that(resp_name).is_not_none()
