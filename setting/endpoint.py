@@ -17,3 +17,6 @@ TEST_RUN_QASE_IO = "1"
 
 #SLACK
 WEBHOOK = os.environ.get('WEBHOOK_SLACK')
+
+#REPORT.HTML
+URL_report = "http://localhost:63342/API_Automation_Python/report/report.html?_ijt=v9htv8vv2bgr4oaprs8bp0vi0k&_ij_reload=RELOAD_ON_SAVE&sort=result"

@@ -1,5 +1,5 @@
 import json
-from endpoint import WEBHOOK
+from endpoint import WEBHOOK, URL_report
 import requests
 from datetime import datetime
 
@@ -86,7 +86,7 @@ def slack_notif():
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "<report/report.html|Link Report Test>"
+                            "text": f"<{URL_report}|Link Report Test>"
                         }
                     },
                     {
