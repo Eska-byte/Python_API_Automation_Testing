@@ -16,5 +16,7 @@ PROJECT_CODE_QASE_IS = "PAA"
 TEST_RUN_QASE_IO = "1"
 
 #SLACK
-# WEBHOOK = "https://hooks.slack.com/services/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"
+# WEBHOOK = "https://hooks.slack.com/services/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"
 WEBHOOK = os.environ.get('WEBHOOK_SLACK')
+print("ENV_LOG_TOKEN_QASE_IO", TOKEN_QASE_IO)
+print("ENV_LOG_WEBHOOK", WEBHOOK)

@@ -133,6 +133,6 @@ def slack_notif():
     }
 
     req = requests.post(WEBHOOK, json=payload)
-
+    print("RESP_STATUS", req.status_code)
 
 slack_notif()
