@@ -86,7 +86,7 @@ def slack_notif():
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "<https://google.com|Link Report Test>"
+                            "text": "<report/report.html|Link Report Test>"
                         }
                     },
                     {
