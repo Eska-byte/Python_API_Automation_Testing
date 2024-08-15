@@ -24,9 +24,9 @@ def slack_notif():
     except:
         test_total = "0"
 
-    test_success_rate = float(test_passed) / float(test_total) * 100
+    test_success_rate = round(float(test_passed) / float(test_total) * 100, 2)
 
-    if float(test_failed) > 1:
+    if float(test_failed) >= 1:
         color = "FF1E00"
     else:
         color = "3CFF29"
@@ -86,7 +86,7 @@ def slack_notif():
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": f"<{URL_report}|Link Report Test>"
+                            "text": f"<{URL_report}/report.html|Link Report Test>"
                         }
                     },
                     {
