@@ -33,3 +33,4 @@ jobs:
         run: python setting/slack_notification.py
         env:
           WEBHOOK_SLACK: ${{ secrets.WEBHOOK_SLACK }}
+          TOKEN_QASE_IO: ${{ secrets.TOKEN_QASE_IO }}
