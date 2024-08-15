@@ -1,0 +1,36 @@
+name: test API Automation with Pytest
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  API-Automation-Python :
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python - m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: run test with pytest
+        run: pytest test/ -v
+        env:
+          WEBHOOK_SLACK: ${{ secrets.WEBHOOK_SLACK }}
+          TOKEN_QASE_IO: ${{ secrets.TOKEN_QASE_IO }}
+
+      - name: Send Report to Slack
+        run: python setting/slack_notification.py
+        env:
+          WEBHOOK_SLACK: ${{ secrets.WEBHOOK_SLACK }}
